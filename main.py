@@ -12,16 +12,14 @@ soup = BeautifulSoup(web_page, "html.parser")
 
 movies = []
 
-movies_names_data = soup.find_all(name="h3", class_="title")
+movies_data = soup.find_all(name="h3", class_="title")
 
 
-for movie in movies_names_data:
+for movie in movies_data:
     name = movie.getText()
     movies.append(name)
 
 movies.reverse()
 
 with open("movies.txt", mode="w") as file:
-        file.writelines('\n'.join(movies))
-
-print(movies)
+    file.writelines('\n'.join(movies))
