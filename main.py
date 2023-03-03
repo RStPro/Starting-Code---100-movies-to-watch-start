@@ -19,6 +19,6 @@ for movie in movies_names_data:
     movies.append(name)
     # ordered_list = movies.reverse()
 
-print(mo)
+print(movies)
 
 
