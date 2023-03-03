@@ -14,12 +14,14 @@ movies = []
 
 movies_names_data = soup.find_all(name="h3", class_="title")
 
+
 for movie in movies_names_data:
     name = movie.getText()
     movies.append(name)
-    # ordered_list = movies.reverse()
+
 movies.reverse()
 
+with open("movies.txt", mode="w") as file:
+        file.writelines('\n'.join(movies))
+
 print(movies)
-
-
