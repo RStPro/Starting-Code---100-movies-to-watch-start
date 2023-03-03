@@ -18,6 +18,7 @@ for movie in movies_names_data:
     name = movie.getText()
     movies.append(name)
     # ordered_list = movies.reverse()
+movies.reverse()
 
 print(movies)
 
